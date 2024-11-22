@@ -1,0 +1,55 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = false
+
+palette = 'TokyoNight'
+
+format = """
+[╭─](pastel_grey bold)$os\
+$sudo\
+$username\
+$hostname\
+$directory\
+\n[╰─> ](pastel_grey bold)
+"""
+
+[palettes.TokyoNight]
+pastel_grey = "#cfc9c2"
+pistachio = "#9ece6a"
+light_crimson = "#f7768e"
+battery_charged_blue = "#2ac3de"
+ucla_blue = "#565f89"
+
+[os]
+format = "[$symbol]($style)"
+style = 'battery_charged_blue bold'
+disabled = false
+
+[os.symbols]
+Arch = " "
+
+[username]
+style_root = 'light_crimson bold'
+style_user = 'pistachio bold'
+format = '[$user]($style)[@](pastel_grey bold)'
+show_always = true
+
+[hostname]
+ssh_only = false
+ssh_symbol = ' '
+format = '[$hostname]($style)[$ssh_symbol](pastel_grey bold) '
+style = 'pistachio bold'
+
+[sudo]
+format = "[\\[](pastel_grey bold)[sudo]($style)[\\]](pastel_grey bold)"
+style = 'light_crimson bold'
+disabled = false
+
+[directory]
+truncation_length = 10
+truncate_to_repo = false
+format = '[$path]($style)[$read_only]($read_only_style) '
+style = 'ucla_blue bold'
+read_only = ' '
+read_only_style = 'light_crimson bold'
+truncation_symbol = '../'
