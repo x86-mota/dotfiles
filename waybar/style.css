@@ -1,85 +1,92 @@
-@import './TokyoNight.css';
-
 * {
-  font-family: JetBrainsMono Nerd Font;
-  border-radius: 8px;
-  padding-top: 0px;
-  padding-bottom: 0px;
-  color: @pastel-grey;
+    font-family: JetBrainsMono Nerd Font;
+    border-radius: 12px;
+    padding-top: 1px;
+    padding-bottom: 1px;
 }
 
 window#waybar {
-  background: transparent;
+    background: @theme_base_color;
+    border-bottom: 1px solid @unfocused_borders;
+    color: @theme_text_color;
+    border-radius: 12px;
 }
 
-#custom-power, #workspaces, #taskbar, #clock , #language, #keyboard-state, #pulseaudio, #tray, #network, #custom-notification {
-  border: 2px solid;
-  border-color: @day-sky-blue;
-  background: @mirage;
-}
-
-#custom-power, #custom-notification, #network, #pulseaudio, #keyboard-state {
-  font-size: 32px;
-}
-
-#workspaces, #clock, #language {
-  font-size: 20px;
-}
-
-#workspaces, #taskbar {
-  margin-left: 15px;
-}
-
-#language, #keyboard-state, #pulseaudio, #tray, #network {
-  margin-right: 15px;
+#custom-power, #workspaces, #clock, #custom-notification, #language, #keyboard-state, #pulseaudio, #tray, #cpu, #memory,#temperature {
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 #custom-power {
-  padding-left: 8px;
-  padding-right: 15px;
-  color: @macaw-blue-green;
+    font-size: 28px;
+    margin-left: 20;
+    color: #2ac3de;
+}
+
+#workspaces label {
+    font-size: 18px;
+    padding-right: 8px;
+    color: @theme_selected_bg_color;
 }
 
 #workspaces button:hover {
-  background: @dusky-blue;
+    background-color: @theme_selected_bg_color;
+    color: @theme_text_color; 
 }
 
-#taskbar {
-  padding-left: 10px;
-  padding-right: 10px;
+#cpu {
+    font-size: 18px;
+    margin-left: 35rem;
+    color: @success_color;
+}
+
+#memory {
+    font-size: 18px;
+    color: @success_color;
+}
+
+#temperature {
+    font-size: 18px;
+    color: @success_color;
 }
 
 #clock {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-#language {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-#keyboard-state {
-  padding-left: 10px;
-  padding-right: 20px;
-}
-
-#pulseaudio {
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-#tray {
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-#network {
-  padding-left: 10px;
-  padding-right: 20px;
+    font-size: 18px;
 }
 
 #custom-notification {
-  padding-left: 11px;
-  padding-right: 15px;
+    font-size: 18px;
+}
+
+#custom-notification.notification {
+    color: @success_color;
+}
+
+#custom-notification.dnd-notification {
+    color: @warning_color;
+}
+
+#custom-notification.inhibited-notification {
+    color: @success_color;
+}
+
+#custom-notification.dnd-inhibited-notification {
+    color: @warning_color;
+}
+
+#language {
+    font-size: 20px;
+}
+
+#keyboard-state {
+    font-size: 24px;
+    padding-left: 10px;
+}
+
+#pulseaudio {
+    font-size: 24px;
+}
+
+#tray {
+    margin-right: 20;
 }
