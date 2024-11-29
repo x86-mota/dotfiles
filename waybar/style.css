@@ -12,79 +12,92 @@ window#waybar {
     border-radius: 12px;
 }
 
-#custom-power, #workspaces, #clock, #custom-notification, #language, #keyboard-state, #pulseaudio, #tray, #cpu, #memory,#temperature {
+#custom-powerbutton,
+#custom-lock,
+#custom-logout,
+#custom-reboot,
+#custom-shutdown,
+#workspaces,
+#clock,
+#custom-notification,
+#language,
+#keyboard-state,
+#pulseaudio,
+#tray,
+#cpu,
+#memory,
+#temperature {
     padding-left: 15px;
     padding-right: 15px;
 }
 
-#custom-power {
+#workspaces label,
+#cpu,
+#memory,
+#temperature,
+#clock,
+#custom-notification,
+#keyboard-state,
+#language,
+#pulseaudio {
+    font-size: 20px;
+}
+
+#cpu,
+#memory,
+#temperature {
+    color: @success_color;
+}
+
+#custom-notification.notification,
+#custom-notification.inhibited-notification {
+    color: @success_color;
+}
+
+#custom-notification.dnd-notification,
+#custom-notification.dnd-inhibited-notification {
+    color: @warning_color;
+}
+
+#custom-powerbutton {
     font-size: 28px;
     margin-left: 20;
     color: #2ac3de;
 }
 
+#custom-lock,
+#custom-logout,
+#custom-reboot,
+#custom-shutdown {
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#custom-lock {
+    background-image: url("./icons/lock.png");
+}
+
+#custom-logout {
+    background-image: url("./icons/logout.png");
+}
+
+#custom-reboot {
+    background-image: url("./icons/reboot.png");
+}
+
+#custom-shutdown {
+    background-image: url("./icons/shutdown.png");
+}
+
 #workspaces label {
-    font-size: 18px;
     padding-right: 8px;
     color: @theme_selected_bg_color;
 }
 
 #workspaces button:hover {
     background-color: @theme_selected_bg_color;
-    color: @theme_text_color; 
-}
-
-#cpu {
-    font-size: 18px;
-    margin-left: 35rem;
-    color: @success_color;
-}
-
-#memory {
-    font-size: 18px;
-    color: @success_color;
-}
-
-#temperature {
-    font-size: 18px;
-    color: @success_color;
-}
-
-#clock {
-    font-size: 18px;
-}
-
-#custom-notification {
-    font-size: 18px;
-}
-
-#custom-notification.notification {
-    color: @success_color;
-}
-
-#custom-notification.dnd-notification {
-    color: @warning_color;
-}
-
-#custom-notification.inhibited-notification {
-    color: @success_color;
-}
-
-#custom-notification.dnd-inhibited-notification {
-    color: @warning_color;
-}
-
-#language {
-    font-size: 20px;
-}
-
-#keyboard-state {
-    font-size: 24px;
-    padding-left: 10px;
-}
-
-#pulseaudio {
-    font-size: 24px;
+    color: @theme_text_color;
 }
 
 #tray {

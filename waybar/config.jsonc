@@ -3,17 +3,17 @@
     "layer": "top",
     "position": "top",
     "modules-left": [
-        "custom/power",
+        "group/powermenu",
         "hyprland/workspaces",
         "group/hardware"
     ],
     "modules-center": [
         "clock",
-         "custom/notification"
+        "custom/notification"
     ],
     "modules-right": [
-        "hyprland/language",
         "keyboard-state",
+        "hyprland/language",
         "group/audio",
         "tray"
     ],
