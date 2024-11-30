@@ -1,11 +1,9 @@
 {
-    "include": "~/.config/waybar/modules.jsonc",
     "layer": "top",
     "position": "top",
     "modules-left": [
         "group/powermenu",
-        "hyprland/workspaces",
-        "group/hardware"
+        "hyprland/workspaces"        
     ],
     "modules-center": [
         "clock",
@@ -13,14 +11,181 @@
     ],
     "modules-right": [
         "keyboard-state",
+        "group/hardware",
         "hyprland/language",
-        "group/audio",
+        "pulseaudio",
+        "pulseaudio#microphone",
         "tray"
     ],
+    "height": 48,
     "margin-top": 10,
     "margin-left": 20,
     "margin-bottom": 5,
     "margin-right": 20,
     "mode": "dock",
-    "reload_style_on_change": true
+    "reload_style_on_change": true,
+    // Power Menu
+    "custom/wmlogo": {
+        "format": " ",
+        "tooltip": false
+    },
+    "custom/lock": {
+        "format": "󰌾",
+        "tooltip": true,
+        "tooltip-format": "Lock Screen",
+        "on-click": "loginctl lock-session"
+    },
+    "custom/logout": {
+        "format": "",
+        "tooltip": true,
+        "tooltip-format": "Exit",
+        "on-click": "hyprctl dispatch exit"
+    },
+    "custom/reboot": {
+        "format": "",
+        "tooltip": true,
+        "tooltip-format": "Reboot",
+        "on-click": "systemctl reboot"
+    },
+    "custom/shutdown": {
+        "format": "⏻",
+        "tooltip": true,
+        "tooltip-format": "Shutdown",
+        "on-click": "shutdown now"
+    },
+    // Power Menu group
+    "group/powermenu": {
+        "orientation": "inherit",
+        "drawer": {
+            "orientation": "horizontal",
+            "transition-duration": 500,
+            "children-class": "actions",
+            "transition-left-to-right": true
+        },
+        "modules": [
+            "custom/wmlogo",
+            "custom/lock",
+            "custom/logout",
+            "custom/reboot",
+            "custom/shutdown"
+        ]
+    },
+    // Taskbar
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "icon-size": 24,
+        "tooltip-format": "{name}",
+        "on-click": "activate"
+    },
+    // Workspaces
+    "hyprland/workspaces": {
+        "active-only": false,
+        "all-outputs": true,
+        "format": "{icon}",
+        "show-special": false,
+        "on-click": "activate",
+        "on-scroll-up": "hyprctl dispatch workspace e+1",
+        "on-scroll-down": "hyprctl dispatch workspace e-1",
+        "persistent-workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": []
+        },
+        "format-icons": {
+            "active": "",
+            "default": ""
+        }
+    },
+    // Hardware
+    "cpu": {
+        "format": " {usage}%",
+        "interval": 1
+    },
+    "memory": {
+        "interval": 1,
+        "format": " {used:0.1f}G/{total:0.1f}G"
+    },
+    "temperature": {
+        "interval": 10,
+        "format": " {temperatureC}°C"
+    },
+    // Group Hardware
+    "group/hardware": {
+        "orientation": "horizontal",
+        "modules": [
+            "cpu",
+            "memory",
+            "temperature"
+        ]
+    },
+    // Clock
+    "clock": {
+        "format": "{:%a, %d %b, %I:%M %p}",
+        "tooltip": false,
+        "justify": "center"
+    },
+    // Notification
+    "custom/notification": {
+        "tooltip": false,
+        "justify": "center",
+        "format": "{icon}",
+        "format-icons": {
+            "notification": "󰂚<span foreground='red'><sup></sup></span>",
+            "none": "󰂚",
+            "dnd-notification": "󰂛<span foreground='red'><sup></sup></span>",
+            "dnd-none": "󰂛",
+            "inhibited-notification": "󰂚<span foreground='red'><sup></sup></span>",
+            "inhibited-none": "󰂚",
+            "dnd-inhibited-notification": "󰂛<span foreground='red'><sup></sup></span>",
+            "dnd-inhibited-none": "󰂛"
+        },
+        "return-type": "json",
+        "exec-if": "which swaync-client",
+        "exec": "swaync-client -swb",
+        "on-click": "swaync-client -t -sw",
+        "escape": true
+    },
+    // Keyboard
+    "keyboard-state": {
+        "capslock": true,
+        "format": {
+            "capslock": "{icon}"
+        },
+        "format-icons": {
+            "locked": "󰪛",
+            "unlocked": ""
+        }
+    },
+    // Language
+    "hyprland/language": {
+        "format": "{short}",
+        "tooltip": false
+    },
+    // Audio
+    "pulseaudio": {
+        "format": "{icon}",
+        "format-muted": "󰖁",
+        "format-icons": {
+            "alsa_output.pci-0000_07_00.4.analog-stereo": "󰓃",
+            "default": "󰕾"
+        },
+        "on-click": "pavucontrol -t 3",
+        "tooltip-format": "{desc}"
+    },
+    "pulseaudio#microphone": {
+        "format": "{format_source}",
+        "format-source": "󰍬",
+        "format-source-muted": "󰍭",
+        "on-click": "pavucontrol -t 4",
+        "tooltip-format": "{source_desc} {volume}%"
+    },
+    // Sys tray
+    "tray": {
+        "icon-size": 24,
+        "show-passive-items": true,
+        "spacing": 10,
+        "reverse-direction": true
+    }
 }
