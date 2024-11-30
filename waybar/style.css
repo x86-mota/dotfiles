@@ -8,7 +8,7 @@
 window#waybar {
     background: @theme_bg_color;
     border-bottom: 1px solid @unfocused_borders;
-    color: @theme_text_color;
+    color: @theme_fg_color;
     border-radius: 12px;
 }
 
@@ -40,7 +40,6 @@ tooltip label {
 #custom-reboot,
 #custom-shutdown {
     font-size: calc(48px * 0.45);
-    color: @accent_fg_color;
     padding-left: 10px;
     padding-right: 15px;
     margin: 1px;
@@ -52,6 +51,7 @@ tooltip label {
 #custom-shutdown:hover,
 #workspaces button:hover {
     background-color: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
 }
 
 #cpu,
@@ -81,11 +81,8 @@ tooltip label {
 
 #workspaces button label {
     font-size: calc(48px * 0.40);
+    font-weight: bold;
     padding-right: 8px;
-}
-
-#hardware {
-    color: @theme_unfocused_selected_bg_color;
 }
 
 #keyboard-state {
