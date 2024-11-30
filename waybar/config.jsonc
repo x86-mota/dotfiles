@@ -33,7 +33,7 @@
         "format": "󰌾",
         "tooltip": true,
         "tooltip-format": "Lock Screen",
-        "on-click": "loginctl lock-session"
+        "on-click": "hyprlock"
     },
     "custom/logout": {
         "format": "",
@@ -51,7 +51,7 @@
         "format": "⏻",
         "tooltip": true,
         "tooltip-format": "Shutdown",
-        "on-click": "shutdown now"
+        "on-click": "systemctl poweroff"
     },
     // Power Menu group
     "group/powermenu": {
