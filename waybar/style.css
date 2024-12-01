@@ -90,5 +90,14 @@ tooltip label {
 }
 
 #tray {
-    margin-right: 15;
+    margin-right: 15px;
+}
+
+#tray menu * {
+    font-size: calc(48px * 0.35);
+}
+
+#tray menu menuitem:hover {
+    background-color: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
 }
