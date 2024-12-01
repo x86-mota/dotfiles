@@ -44,12 +44,13 @@
 
 .widget-dnd>switch {
     color: @theme_fg_color;
-    background: @theme_base_color;
+    background: @theme_bg_color;
     border: 1px solid @theme_base_color;
 }
 
 .widget-dnd>switch slider {
     background: @theme_bg_color;
+    border: 1px solid @theme_base_color;
 }
 
 .widget-dnd>switch:checked {
@@ -67,7 +68,7 @@
 
 .notification-content {
     color: @theme_fg_color;
-    background: @theme_bg_color;
+    background: @theme_base_color;
     border: 1px solid @theme_selected_bg_color;
     padding: 10px;
 }
@@ -96,8 +97,8 @@
 
 .close-button {
     color: @theme_fg_color;
-    background: @theme_bg_color;
-    border: 1px solid @theme_base_color;
+    background: @theme_base_color;
+    border: 1px solid @theme_bg_color;
     border-radius: 8px;
     margin-top: 10px;
     margin-right: 10px;
@@ -107,4 +108,56 @@
     color: @theme_bg_color;
     background: @theme_selected_bg_color;
     transition: all .15s ease-in-out;
+}
+
+.notification-group-icon {
+    color: @theme_fg_color;
+    padding: 10px;
+}
+
+.notification-group-header {
+    color: @theme_fg_color;
+    padding: 10px;
+}
+
+.notification-group-buttons button {
+    color: @theme_fg_color;
+    background-color: @theme_base_color;
+}
+
+.notification-group-buttons button:hover {
+    color: @theme_bg_color;
+    background-color: @theme_selected_bg_color;
+    transition: all .15s ease-in-out;
+}
+
+.widget-mpris {
+    color: @theme_fg_color;
+    background: @theme_bg_color;
+    padding: 5px 10px;
+    margin: 10px 10px 5px 10px;
+    border-radius: 5px;
+}
+
+.widget-mpris>box>button {
+    border-radius: 5px;
+}
+
+.widget-mpris-player {
+    padding: 5px 10px;
+    margin: 10px
+}
+
+.widget-mpris-player button:hover {
+    background: alpha(@theme_selected_bg_color, 0.2);
+    color: @theme_fg_color;
+}
+
+.widget-mpris-title {
+    font-weight: 700;
+    font-size: 1.25rem
+}
+
+.widget-mpris-subtitle {
+    font-size: 1.1rem
 }
