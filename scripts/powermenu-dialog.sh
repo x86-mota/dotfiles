@@ -38,16 +38,21 @@ case "$1" in
     --logout)
         power_menu_dialog "hyprctl dispatch exit" "Log Out  ${USER}" "${LOGOUT_MSG}"
         ;;
+    --lock)
+        hyprlock
+        ;;
     *)
         echo -e "Usage: $0 [OPTION]
         Options:
             --shutdown   Power off the system
             --reboot     Restart the system
             --logout     Log out the current user ($USER)
+            --lock       Lock the screen
         Example usage:
             $0 --shutdown
             $0 --reboot
             $0 --logout
+            $0 --lock
         "
         exit 1
         ;;
