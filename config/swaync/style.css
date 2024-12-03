@@ -19,13 +19,13 @@
 .widget-title button {
     font-size: 16px;
     color: @theme_fg_color;
-    background: @theme_bg_color;
+    background: alpha(@theme_bg_color, 0.5);
     border: 1px solid @theme_base_color;
 }
 
 .widget-title button:hover {
     color: @theme_bg_color;
-    background: @theme_selected_bg_color;
+    background: alpha(@theme_selected_bg_color, 0.5);
 }
 
 .widget-dnd {
@@ -40,17 +40,17 @@
 
 .widget-dnd>switch {
     color: @theme_fg_color;
-    background: @theme_bg_color;
+    background: alpha(@theme_bg_color, 0.5);
     border: 1px solid @theme_base_color;
 }
 
 .widget-dnd>switch slider {
-    background: @theme_bg_color;
+    background: alpha(@theme_bg_color, 0.5);
     border: 1px solid @theme_base_color;
 }
 
 .widget-dnd>switch:checked {
-    background: @theme_selected_bg_color;
+    background: alpha(@theme_selected_bg_color, 0.5);
 }
 
 .widget-dnd>switch:checked * {
