@@ -29,6 +29,7 @@ tooltip label {
 #keyboard-state,
 #language,
 #pulseaudio,
+#custom-updates,
 #tray {
     margin-left: 10px;
     margin-right: 10px;
@@ -38,7 +39,8 @@ tooltip label {
 #custom-lock,
 #custom-logout,
 #custom-reboot,
-#custom-shutdown {
+#custom-shutdown,
+#custom-updates {
     font-size: calc(48px * 0.45);
     padding-left: 10px;
     padding-right: 15px;
@@ -99,5 +101,5 @@ tooltip label {
 
 #tray menu menuitem:hover {
     background-color: alpha(@theme_selected_bg_color, 0.5);
-    color: @theme_selected_fg_color;
+    color: alpha(@theme_selected_fg_color, 0.5);
 }
