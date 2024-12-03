@@ -64,7 +64,7 @@ tooltip label {
 }
 
 #custom-wmlogo {
-    background-image: url("./icons/logo.png");
+    background-image: url("../icons/logo.png");
     background-size: 48px;
     background-repeat: no-repeat;
     background-position: center;
