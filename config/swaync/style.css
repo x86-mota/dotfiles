@@ -3,13 +3,9 @@
     border-radius: 12px;
 }
 
-.blank-window {
-    background: alpha(@theme_bg_color, 0.2)
-}
-
 .control-center {
     color: @theme_fg_color;
-    background: @theme_bg_color;
+    background: alpha(@theme_bg_color, 0.5);
     border: 1px solid @theme_selected_bg_color;
 }
 
@@ -62,15 +58,19 @@
 }
 
 .notification {
-    background-color: alpha(@theme_bg_color, 0.9);
+    background-color: alpha(@theme_bg_color, 0.5);
     border: 1px solid @theme_base_color;
 }
 
 .notification-content {
     color: @theme_fg_color;
-    background: @theme_base_color;
+    background: alpha(@theme_base_color, 0.5);
     border: 1px solid @theme_selected_bg_color;
     padding: 10px;
+}
+
+.notification-default-action:hover {
+    background-color: alpha(@theme_bg_color, 0.9);
 }
 
 .summary {
