@@ -7,7 +7,7 @@
 }
 
 window {
-    background-color: @theme_bg_color;
+    background: alpha(@theme_bg_color, 0.5);
     animation: slideIn 0.1s ease-in-out both;
 }
 
@@ -45,7 +45,7 @@ window {
     padding: 10px;
     border: none;
     color: @theme_fg_color;
-    background-color: @theme_base_color;
+    background: alpha(@theme_base_color, 0.5);
 }
 
 #input image {
@@ -74,7 +74,7 @@ window {
 
 #entry:selected {
     border: none;
-    background-color: @theme_selected_bg_color;
+    background-color: alpha(@theme_selected_bg_color, 0.5);
 }
 
 #entry:selected #text {
@@ -82,5 +82,5 @@ window {
 }
 
 #entry:drop(active) {
-    background-color: @theme_selected_bg_color!important;
+    background-color: alpha(@theme_selected_bg_color, 0.5)!important;
 }
