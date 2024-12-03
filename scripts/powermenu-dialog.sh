@@ -14,7 +14,7 @@ function power_menu_dialog {
     zenity --question \
         --title="${action_name}" \
         --icon="${IMAGE}" \
-        --text="$3" \
+        --text="${text}" \
         --timeout=$TIMEOUT \
         --no-wrap \
         --default-cancel
