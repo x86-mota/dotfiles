@@ -39,7 +39,16 @@ case "$1" in
         power_menu_dialog "hyprctl dispatch exit" "Log Out  ${USER}" "${LOGOUT_MSG}"
         ;;
     *)
-        echo "Usage: $0 --shutdown or $0 --reboot"
+        echo -e "Usage: $0 [OPTION]
+        Options:
+            --shutdown   Power off the system
+            --reboot     Restart the system
+            --logout     Log out the current user ($USER)
+        Example usage:
+            $0 --shutdown
+            $0 --reboot
+            $0 --logout
+        "
         exit 1
         ;;
 esac
