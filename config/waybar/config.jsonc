@@ -39,19 +39,19 @@
         "format": "",
         "tooltip": true,
         "tooltip-format": "Exit",
-        "on-click": "hyprctl dispatch exit"
+        "on-click": "powermenu-dialog.sh --logout"
     },
     "custom/reboot": {
         "format": "",
         "tooltip": true,
         "tooltip-format": "Reboot",
-        "on-click": "systemctl reboot"
+        "on-click": "powermenu-dialog.sh --reboot"
     },
     "custom/shutdown": {
         "format": "⏻",
         "tooltip": true,
         "tooltip-format": "Shutdown",
-        "on-click": "dialog-shutdown.sh"
+        "on-click": "powermenu-dialog.sh --shutdown"
     },
     // Power Menu group
     "group/powermenu": {
