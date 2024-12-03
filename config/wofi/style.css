@@ -3,22 +3,12 @@
 * {
     font-family: monospace;
     font-size: large;
+    font-weight: bold;
     border-radius: 12px;
 }
 
 window {
     background: alpha(@theme_bg_color, 0.5);
-    animation: slideIn 0.1s ease-in-out both;
-}
-
-@keyframes slideIn {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
 }
 
 #outer-box {
@@ -44,22 +34,22 @@ window {
     margin: 5px 20px;
     padding: 10px;
     border: none;
-    color: @theme_fg_color;
+    color: alpha(@theme_fg_color, 0.5);
     background: alpha(@theme_base_color, 0.5);
 }
 
 #input image {
     border: none;
-    color: @theme_fg_color;
+    color: alpha(@theme_fg_color, 0.5);
 }
 
 #input * {
-    outline: 4px solid @theme_fg_color !important;
+    outline: 4px solid alpha(@theme_fg_color, 0.5)!important;
 }
 
 #text {
     margin: 5px;
-    color: @theme_fg_color;
+    color: alpha(@theme_fg_color, 0.5);
 }
 
 #entry {
@@ -69,7 +59,7 @@ window {
 
 #entry arrow {
     border: none;
-    color: @theme_fg_color;
+    color: alpha(@theme_fg_color, 0.5);
 }
 
 #entry:selected {
@@ -78,7 +68,7 @@ window {
 }
 
 #entry:selected #text {
-    color: @theme_bg_color;
+    color: alpha(@theme_bg_color, 0.5);
 }
 
 #entry:drop(active) {
