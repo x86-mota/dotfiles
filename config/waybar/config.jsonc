@@ -33,7 +33,7 @@
         "format": "",
         "tooltip": true,
         "tooltip-format": "Lock Screen",
-        "on-click": "hyprlock"
+        "on-click": "powermenu-dialog.sh --lock"
     },
     "custom/logout": {
         "format": "",
