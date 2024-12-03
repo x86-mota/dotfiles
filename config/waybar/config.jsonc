@@ -190,7 +190,7 @@
             "updated": "󰂪"
         },
         "exec-if": "which waybar-module-pacman-updates",
-        "exec": "waybar-module-pacman-updates --interval-seconds 900 --network-interval-seconds 1800"
+        "exec": "waybar-module-pacman-updates --interval-seconds 900 --network-interval-seconds 1800 --no-zero-output"
     },
     // Sys tray
     "tray": {
