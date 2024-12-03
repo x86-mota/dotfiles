@@ -7,7 +7,7 @@ op=$(echo -e "Lock  \nLogout \nReboot \nPoweroff ⏻" | wofi --dmenu --
 
 case $op in
     lock)
-        hyprlock
+        powermenu-dialog.sh --lock
         ;;
     logout)
         powermenu-dialog.sh --logout
