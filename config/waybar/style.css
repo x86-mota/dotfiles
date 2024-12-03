@@ -6,7 +6,7 @@
 }
 
 window#waybar {
-    background: @theme_bg_color;
+    background: alpha(@theme_bg_color, 0.5);
     border-bottom: 1px solid @unfocused_borders;
     color: @theme_fg_color;
     border-radius: 12px;
