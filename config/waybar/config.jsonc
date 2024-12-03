@@ -51,7 +51,7 @@
         "format": "⏻",
         "tooltip": true,
         "tooltip-format": "Shutdown",
-        "on-click": "systemctl poweroff"
+        "on-click": "dialog-shutdown.sh"
     },
     // Power Menu group
     "group/powermenu": {
