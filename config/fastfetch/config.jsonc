@@ -3,9 +3,7 @@
 	"logo": {
 		"source": "~/.config/fastfetch/arch-logo.png",
 		"type": "kitty-direct",
-        "padding": {
-            "top": 1
-        }
+        "width": 40
 	},
     "display": {
         "separator": " -> "
@@ -57,7 +55,7 @@
         {
             "type": "theme",
             "key": "   ",
-            "keyColor": "white"
+            "keyColor": "default"
         },
         {
             "type": "icons",
