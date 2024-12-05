@@ -1,19 +1,23 @@
 * {
+    font-size: 1.5rem;
     border-radius: 12px;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    font-size: calc(48px * 0.50);
+    padding-top: 1px;
+    padding-bottom: 1px;
+    border: none;
 }
 
 window#waybar {
     background: alpha(@theme_bg_color, 0.5);
-    border-bottom: 1px solid alpha(@unfocused_borders, 0.5);
-    color: alpha(@theme_fg_color, 0.5);
-    border-radius: 12px;
+    border-bottom: 1px solid @unfocused_borders;
+    color: alpha(@theme_fg_color, 0.8);
+}
+
+tooltip {
+    background: alpha(@theme_bg_color, 0.9);
 }
 
 tooltip label {
-    font-size: calc(48px * 0.35);
+    font-size: 1.2rem;
 }
 
 #custom-wmlogo,
@@ -33,7 +37,6 @@ tooltip label {
 #tray {
     margin-left: 10px;
     margin-right: 10px;
-    /* border: 1px solid; */
 }
 
 #custom-lock,
@@ -41,7 +44,7 @@ tooltip label {
 #custom-reboot,
 #custom-shutdown,
 #custom-updates {
-    font-size: calc(48px * 0.45);
+    font-size: 1.45rem;
     padding-left: 10px;
     padding-right: 15px;
     margin: 1px;
@@ -53,7 +56,7 @@ tooltip label {
 #custom-shutdown:hover,
 #workspaces button:hover {
     background-color: alpha(@theme_selected_bg_color, 0.5);
-    color: alpha(@theme_selected_fg_color, 0.5);
+    color: alpha(@theme_selected_fg_color, 0.9);
 }
 
 #cpu,
@@ -62,15 +65,15 @@ tooltip label {
 #clock,
 #custom-notification,
 #language {
-    font-size: calc(48px * 0.35);
+    font-size: 1.35rem;
 }
 
 #custom-wmlogo {
     background-image: url("../icons/logo.png");
-    background-size: 48px;
+    background-size: 3.9rem;
     background-repeat: no-repeat;
     background-position: center;
-    font-size: calc(48px * 0.7);
+    font-size: 1.9rem;
     margin-left: 15px;
     padding-left: 15px;
     padding-right: 15px;
@@ -82,24 +85,29 @@ tooltip label {
 }
 
 #workspaces button label {
-    font-size: calc(48px * 0.40);
+    font-size: 1.4rem;
     font-weight: bold;
     padding-right: 8px;
 }
 
 #keyboard-state {
-    color: alpha(@warning_color, 0.5);
+    color: alpha(@warning_color, 0.9);
 }
 
 #tray {
     margin-right: 15px;
 }
 
+#tray menu {
+    background: alpha(@theme_bg_color, 0.9);
+    color: alpha(@theme_fg_color, 0.9);
+}
+
 #tray menu * {
-    font-size: calc(48px * 0.35);
+    font-size: 1.35rem;
 }
 
 #tray menu menuitem:hover {
-    background-color: alpha(@theme_selected_bg_color, 0.5);
-    color: alpha(@theme_selected_fg_color, 0.5);
+    background-color: alpha(@theme_selected_bg_color, 0.9);
+    color: alpha(@theme_selected_fg_color, 0.9);
 }
