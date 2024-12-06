@@ -22,7 +22,7 @@
     "window.customTitleBarVisibility": "never",
     "window.menuBarVisibility": "toggle",
     "window.restoreWindows": "none",
-    "workbench.colorTheme": "Tokyo Night",
+    "workbench.colorTheme": "Dracula Theme",
     "workbench.editor.labelFormat": "short",
     "workbench.iconTheme": "symbols",
     "workbench.startupEditor": "none",
