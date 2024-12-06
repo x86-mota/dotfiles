@@ -6,7 +6,7 @@
 }
 
 window {
-    background: alpha(@theme_bg_color, 0.5);
+    background: @theme_bg_color;
 }
 
 #outer-box {
@@ -32,22 +32,22 @@ window {
     margin: 5px 20px;
     padding: 10px;
     border: none;
-    color: alpha(@theme_fg_color, 0.5);
-    background: alpha(@theme_base_color, 0.5);
+    color: @theme_fg_color;
+    background: @theme_base_color;
 }
 
 #input image {
     border: none;
-    color: alpha(@theme_fg_color, 0.5);
+    color: @theme_fg_color;
 }
 
 #input * {
-    outline: 4px solid alpha(@theme_fg_color, 0.5)!important;
+    outline: 4px solid @theme_fg_color!important;
 }
 
 #text {
     margin: 5px;
-    color: alpha(@theme_fg_color, 0.5);
+    color: @theme_fg_color;
 }
 
 #entry {
@@ -57,18 +57,18 @@ window {
 
 #entry arrow {
     border: none;
-    color: alpha(@theme_fg_color, 0.5);
+    color: @theme_fg_color;
 }
 
 #entry:selected {
     border: none;
-    background-color: alpha(@theme_selected_bg_color, 0.5);
+    background-color: @theme_selected_bg_color;
 }
 
 #entry:selected #text {
-    color: alpha(@theme_bg_color, 0.5);
+    color: @theme_bg_color;
 }
 
 #entry:drop(active) {
-    background-color: alpha(@theme_selected_bg_color, 0.5)!important;
+    background-color: @theme_selected_bg_color!important;
 }

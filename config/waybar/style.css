@@ -7,13 +7,13 @@
 }
 
 window#waybar {
-    background: alpha(@theme_bg_color, 0.5);
+    background: @theme_bg_color;
     border-bottom: 1px solid @unfocused_borders;
-    color: alpha(@theme_fg_color, 0.8);
+    color: @theme_fg_color;
 }
 
 tooltip {
-    background: alpha(@theme_bg_color, 0.9);
+    background: @theme_bg_color;
 }
 
 tooltip label {
@@ -55,8 +55,8 @@ tooltip label {
 #custom-reboot:hover,
 #custom-shutdown:hover,
 #workspaces button:hover {
-    background-color: alpha(@theme_selected_bg_color, 0.5);
-    color: alpha(@theme_selected_fg_color, 0.9);
+    background-color: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
 }
 
 #cpu,
@@ -91,7 +91,7 @@ tooltip label {
 }
 
 #keyboard-state {
-    color: alpha(@warning_color, 0.9);
+    color: @warning_color;
 }
 
 #tray {
@@ -99,8 +99,8 @@ tooltip label {
 }
 
 #tray menu {
-    background: alpha(@theme_bg_color, 0.9);
-    color: alpha(@theme_fg_color, 0.9);
+    background: @theme_bg_color;
+    color: @theme_fg_color;
 }
 
 #tray menu * {
@@ -108,6 +108,6 @@ tooltip label {
 }
 
 #tray menu menuitem:hover {
-    background-color: alpha(@theme_selected_bg_color, 0.9);
-    color: alpha(@theme_selected_fg_color, 0.9);
+    background-color: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
 }
