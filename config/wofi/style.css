@@ -3,10 +3,9 @@
     font-size: large;
     font-weight: bold;
     border-radius: 12px;
-}
-
-window {
-    background: @theme_bg_color;
+    outline-color: transparent;
+    border: none;
+    background-color: @theme_bg_color;
 }
 
 #outer-box {
@@ -20,6 +19,10 @@ window {
     margin: 0px;
     padding: 10px;
     background-color: transparent;
+}
+
+#scroll * {
+    background: transparent;
 }
 
 #inner-box {
@@ -39,6 +42,7 @@ window {
 #input image {
     border: none;
     color: @theme_fg_color;
+    background-color: transparent;
 }
 
 #input * {
@@ -61,12 +65,12 @@ window {
 }
 
 #entry:selected {
-    border: none;
     background-color: @theme_selected_bg_color;
 }
 
-#entry:selected #text {
+#entry:selected * {
     color: @theme_bg_color;
+    background-color: transparent;
 }
 
 #entry:drop(active) {
