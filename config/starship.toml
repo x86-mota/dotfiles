@@ -2,54 +2,61 @@
 
 add_newline = false
 
-palette = 'TokyoNight'
+palette = 'dracula'
 
 format = """
-[╭─](pastel_grey bold)$os\
+[╭─](foreground bold)$os\
 $sudo\
 $username\
 $hostname\
 $directory\
-\n[╰─> ](pastel_grey bold)
+\n[╰─> ](foreground bold)
 """
 
-[palettes.TokyoNight]
-pastel_grey = "#cfc9c2"
-pistachio = "#9ece6a"
-light_crimson = "#f7768e"
-battery_charged_blue = "#2ac3de"
-ucla_blue = "#565f89"
+# Define Dracula color palette
+[palettes.dracula]
+background = "#282a36"
+current_line = "#44475a"
+foreground = "#f8f8f2"
+comment = "#6272a4"
+cyan = "#8be9fd"
+green = "#50fa7b"
+orange = "#ffb86c"
+pink = "#ff79c6"
+purple = "#bd93f9"
+red = "#ff5555"
+yellow = "#f1fa8c"
 
 [os]
 format = "[$symbol]($style)"
-style = 'battery_charged_blue bold'
+style = 'cyan bold'
 disabled = false
 
 [os.symbols]
-Arch = " "
+Arch = "  "
 
 [username]
-style_root = 'light_crimson bold'
-style_user = 'pistachio bold'
-format = '[$user]($style)[@](pastel_grey bold)'
+style_root = 'red bold'
+style_user = 'green bold'
+format = '[$user]($style)[@](foreground bold)'
 show_always = true
 
 [hostname]
 ssh_only = false
 ssh_symbol = ' '
-format = '[$hostname]($style)[$ssh_symbol](pastel_grey bold) '
-style = 'pistachio bold'
+format = '[$hostname]($style)[$ssh_symbol](foreground bold) '
+style = 'green bold'
 
 [sudo]
-format = "[\\[](pastel_grey bold)[sudo]($style)[\\]](pastel_grey bold)"
-style = 'light_crimson bold'
+format = "[\\[](foreground bold)[sudo]($style)[\\]](foreground bold)"
+style = 'red bold'
 disabled = false
 
 [directory]
 truncation_length = 10
 truncate_to_repo = false
 format = '[$path]($style)[$read_only]($read_only_style) '
-style = 'ucla_blue bold'
+style = 'comment bold'
 read_only = ' '
-read_only_style = 'light_crimson bold'
+read_only_style = 'red bold'
 truncation_symbol = '../'
